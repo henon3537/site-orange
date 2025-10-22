@@ -1,0 +1,79 @@
+@use "variables" as var;
+@use "mixin";
+
+.body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: var.rem(16);
+    line-height: 1.6;
+    color: var.$black;
+    padding: 0 10px;
+    background-image: url(../img/back-tiny.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+
+    @include mixin.mq(tab) {
+        padding: 0 30px;
+        font-size: var.rem(17);
+    }
+
+    @include mixin.mq(pc) {
+        width: 1050px;
+        margin: 0 auto;
+        padding: 0;
+        font-size: var.rem(18);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    address {
+        transform: rotate(0.03deg); //アンチエイリアスを無理やりかけるため
+    }
+
+    &__subtitle {
+        margin-bottom: 6px;
+
+        @include mixin.mq(tab) {
+            margin-bottom: 8px;
+        }
+
+        @include mixin.mq(pc) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__header {
+        @include mixin.mq(pc) {
+            margin-left: calc(-50vw + 50%);
+        }
+    }
+
+    &__concept {
+        margin: 0 auto 20px -10px;
+
+        @include mixin.mq(tab) {
+            margin-left: -30px;
+            margin-bottom: 40px;
+        }
+
+        @include mixin.mq(pc) {
+            margin-left: calc(-50vw + 50%);
+        }
+    }
+
+    &__content {
+        margin-bottom: 20px;
+
+        @include mixin.mq(tab) {
+            margin-bottom: 40px;
+        }
+    }
+}

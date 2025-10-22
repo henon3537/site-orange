@@ -1,0 +1,115 @@
+@use "variables" as var;
+@use "mixin";
+
+.another {
+    &__list {
+        margin-bottom: 20px;
+
+        list-style: disc;
+        list-style-position: inside;
+
+        @include mixin.mq(pc) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 5px;
+        padding-left: 1.4em;
+        text-indent: -1.4em;
+        background-color: var.$translucent-white;
+
+        &:last-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__history {
+        max-width: 500px;
+        margin: 0 auto 10px;
+        padding: 5px;
+        text-align: center;
+        background-color: var.$translucent-white;
+        border: 1px var.$orange solid;
+
+        @include mixin.mq(tab) {
+            width: 550px;
+            max-width: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include mixin.mq(pc) {
+            width: 600px;
+        }
+    }
+
+    &__history-title {
+        margin-bottom: 5px;
+    }
+
+    &__history-list {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    &__history-item {
+        margin: 0 10px 5px;
+        text-align: left;
+        padding-left: 1.4em;
+        text-indent: -1.4em;
+
+        @include mixin.mq(tab) {
+            width: 380px; //改行されないぎりぎりの幅
+            margin: 0 auto 5px;
+        }
+
+        @include mixin.mq(pc) {
+            width: 400px; //改行されないぎりぎりの幅
+        }
+    }
+
+    &__report {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 5px;
+        text-align: center;
+        background-color: var.$translucent-white;
+        border: 1px var.$orange solid;
+
+        @include mixin.mq(tab) {
+            width: 550px;
+            max-width: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include mixin.mq(pc) {
+            width: 600px;
+        }
+    }
+
+    &__report-title {
+        margin-bottom: 5px;
+    }
+
+    &__report-item {
+        display: block;
+        margin: 0 10px;
+        padding-left: 26px;
+        text-align: left;
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-image: url(../img/pdf-tiny.png);
+
+        @include mixin.mq(tab) {
+            width: 480px; //改行されないぎりぎりの幅
+            margin: 0 auto;
+        }
+
+        @include mixin.mq(pc) {
+            width: 502px; //改行されないぎりぎりの幅
+        }
+    }
+}

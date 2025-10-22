@@ -1,0 +1,67 @@
+@use "variables" as var;
+@use "mixin";
+
+.contact {
+    &__tel-and-mail {
+        text-align: center;
+    }
+
+    &__tel {
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: var.rem(24);
+
+        @include mixin.mq(tab) {
+            font-size: var.rem(26);
+        }
+
+        @include mixin.mq(pc) {
+            font-size: var.rem(30);
+        }
+    }
+
+    &__mail {
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: var.rem(18);
+
+        @include mixin.mq(tab) {
+            font-size: var.rem(26);
+        }
+
+        @include mixin.mq(pc) {
+            font-size: var.rem(30);
+        }
+    }
+
+    &__link {
+        color: var.$blue;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+        text-align: left;
+        display: inline-block;
+    }
+
+    &__place {
+        @include mixin.mq(tab) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+    }
+
+    &__place-unit {
+        margin: 0 auto 10px;
+
+        @include mixin.mq(tab) {
+            margin: 0 0 30px;
+        }
+
+        &--ciel {
+            margin-bottom: 0;
+        }
+    }
+}

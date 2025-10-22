@@ -1,0 +1,17 @@
+@use "sass:math";
+
+$baseFontSize: 16;
+@function rem($pixels) {
+    @return math.div($pixels, $baseFontSize) * 1rem;
+}
+
+$orange: #ee921f;
+$translucent-orange: rgba(250, 233, 214, 0.6);
+$blue: #0029ff;
+$light-blue: #54abdf;
+$translucent-light-blue: rgba(227, 245, 255, 0.6);
+$red: #e72b0e;
+$pink: #ef63ef;
+$white: #f0f0f0;
+$translucent-white: rgba(255, 255, 255, 0.5);
+$black: #000;

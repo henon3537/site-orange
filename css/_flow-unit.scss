@@ -1,0 +1,79 @@
+@use "variables" as var;
+@use "mixin";
+
+.flow-unit {
+    border: 2px var.$orange solid;
+    padding: 0 5px 5px;
+    background-color: var.$translucent-white;
+
+    @include mixin.mq(tab){
+        display: flex;
+        gap: 10px;
+        padding-top: 5px;
+        height: 150px;
+    }
+
+    &__top {
+        height: 40px;
+        position: relative;
+
+        @include mixin.mq(tab){
+            position: static;
+            flex-shrink: 0;
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: var.rem(20);
+        line-height: 2;
+
+        @include mixin.mq(tab){
+            font-size: var.rem(22);
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__img {
+        width: 48px;
+        height: 36px;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+
+        @include mixin.mq(tab){
+            position: static;
+            display: block;
+            margin: 0 auto;
+            width: 112px;
+            height: 84px;
+        }
+    }
+
+    &__line {
+        content: "";
+        width: 100%;
+        height: 0;
+        margin: 0 auto;
+        border-bottom: 1px var.$orange solid;
+
+        @include mixin.mq(tab){
+            width: 0;
+            height: 100%;
+            margin: 0;
+            border-bottom: none;
+            border-right: 1px var.$orange solid;
+        }
+    }
+
+    &__text {
+        padding-top: 5px;
+    }
+
+    &__link {
+        color: var.$blue;
+    }
+}

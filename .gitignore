@@ -1,0 +1,5 @@
+# macOS: 不要ファイル / 不要ディレクトリ
+.DS_Store
+Thumbs.db
+
+.vscode/

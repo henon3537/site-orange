@@ -1,0 +1,24 @@
+@use "variables" as var;
+@use "mixin";
+
+.br {
+    &__pc {
+        display: none;
+
+        @include mixin.mq(pc){
+            display: inline;
+        }
+    }
+
+    &__sp-and-tab {
+        @include mixin.mq(pc){
+            display: none;
+        }
+    }
+
+    &__sp {
+    @include mixin.mq(tab) {
+        display: none;
+       }
+    }
+}

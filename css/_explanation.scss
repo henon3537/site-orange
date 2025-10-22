@@ -1,0 +1,19 @@
+@use "variables" as var;
+@use "mixin";
+
+.explanation {
+    text-align: center;
+
+    &__text {
+        margin-bottom: 5px;
+        padding: 0 5px;
+        text-align: left;
+        background-color: var.$translucent-white;
+    }
+
+    &__img {
+        width: 90%;
+        max-width: 600px;
+        margin-bottom: 10px;
+    }
+}

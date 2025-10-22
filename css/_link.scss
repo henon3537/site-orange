@@ -1,0 +1,6 @@
+@use "variables" as var;
+@use "mixin";
+
+.link {
+    color: var.$blue;
+}

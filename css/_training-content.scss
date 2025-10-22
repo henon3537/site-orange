@@ -1,0 +1,12 @@
+@use "variables" as var;
+@use "mixin";
+
+.training-content{
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px 0;
+        margin-bottom: 20px;
+    }
+}

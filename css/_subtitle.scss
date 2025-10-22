@@ -1,0 +1,25 @@
+@use "variables" as var;
+@use "mixin";
+
+.subtitle {
+    padding-left: 20px;
+    font-size: var.rem(22);
+    color: var.$orange;
+
+    background-position: left 0 center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-image: url(../img/orange-tiny.png);
+
+    @include mixin.mq(tab){
+        background-size: 18px 18px;
+        padding-left: 22px;
+        font-size: var.rem(24);
+    }
+
+    @include mixin.mq(pc){
+        background-size: 20px 20px;
+        padding-left: 24px;
+        font-size: var.rem(26);
+    }
+}

@@ -1,0 +1,68 @@
+@use "variables" as var;
+@use "mixin";
+
+.place {
+    width: 300px;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: var.$translucent-orange;
+    border: 2px var.$orange solid;
+
+    @include mixin.mq(tab) {
+        width: 48%;
+    }
+
+    &--ciel {
+        background-color: var.$translucent-light-blue;
+        border-color: var.$light-blue;
+    }
+
+    &__title {
+        margin: 0 auto 10px;
+        width: 240px;
+        background-color: #fff;
+        border: 1px var.$orange solid;
+        border-radius: 20px;
+
+        &--ciel {
+            border-color: var.$light-blue;
+        }
+    }
+
+    &__title-division {
+        font-size: var.rem(20);
+    }
+
+    &__title-line {
+        width: 100%;
+        height: 0;
+        border-top: 1px var.$orange solid;
+
+        &--ciel {
+            border-color: var.$light-blue;
+        }
+    }
+
+    &__title-name {
+        font-size: var.rem(20);
+    }
+
+    &__address {
+        margin-bottom: 10px;
+        font-size: var.rem(18);
+    }
+
+    &__map {
+        width: 270px;
+        height: 135px;
+
+        @include mixin.mq(tab) {
+            width: 80%;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        text-align: left;
+    }
+}

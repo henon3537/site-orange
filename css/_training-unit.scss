@@ -1,0 +1,35 @@
+@use "variables" as var;
+@use "mixin";
+
+.training-unit {
+    width: 48%;
+    text-align: center;
+    padding: 5px;
+    background-image: url(../img/training_unit_back-tiny.png);
+    background-size: cover;
+
+    @include mixin.mq(tab){
+        width: 23%
+    }
+
+    &__img {
+        width: 80%;
+    }
+
+    &__title {
+        font-size: var.rem(18);
+
+        @include mixin.mq(pc){
+            font-size: var.rem(20);
+        }
+    }
+
+    &__text {
+        text-align: left;
+        font-size: var.rem(14);
+
+        @include mixin.mq(pc){
+            font-size: var.rem(16);
+        }
+    }
+}

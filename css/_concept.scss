@@ -1,0 +1,78 @@
+@use "variables" as var;
+@use "mixin";
+
+.concept {
+    padding: 10px 10px;
+    background-image: url(../img/concept_back-tiny.jpg);
+    background-size: cover;
+    width: calc(100% + 20px);
+    text-align: center;
+
+    @include mixin.mq(tab) {
+        width: calc(100% + 60px);
+        padding: 10px 30px;
+    }
+
+    @include mixin.mq(pc) {
+        width: 100vw;
+    }
+
+    &__slogan {
+        margin-bottom: 10px;
+        font-size: var.rem(18);
+
+        @include mixin.mq(tab) {
+            font-size: var.rem(20);
+        }
+
+        @include mixin.mq(pc) {
+            font-size: var.rem(22);
+        }
+    }
+
+    &__main {
+        font-size: var.rem(18);
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 10px;
+
+        @include mixin.mq(tab) {
+            font-size: var.rem(20);
+            margin-bottom: 20px;
+        }
+
+        @include mixin.mq(pc) {
+            font-size: var.rem(22);
+        }
+    }
+
+    &__flex {
+        @include mixin.mq(pc) {
+            width: 1050px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+    &__text {
+        text-align: left;
+    }
+
+    &__img {
+        width: 150px;
+        height: 100%;
+        margin-bottom: 10px;
+
+        @include mixin.mq(tab) {
+            width: 200px;
+            height: 100%;
+        }
+    }
+
+    &__text-ciel {
+        display: inline-block;
+        text-align: left;
+    }
+}

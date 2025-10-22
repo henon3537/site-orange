@@ -1,0 +1,35 @@
+@use "variables" as var;
+@use "mixin";
+
+.target {
+    &__division {
+        font-size: var.rem(18);
+
+        @include mixin.mq(pc) {
+            font-size: var.rem(20);
+        }
+    }
+
+    &__text {
+        margin-bottom: 5px;
+        padding: 0 5px;
+        background-color: var.$translucent-white;
+
+        &--last {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        list-style: decimal;
+        list-style-position: inside;
+    }
+
+    &__item {
+        margin-bottom: 5px;
+        padding: 0 5px;
+        background-color: var.$translucent-white;
+        padding-left: 1.15em;
+        text-indent: -1.15em;
+    }
+}
